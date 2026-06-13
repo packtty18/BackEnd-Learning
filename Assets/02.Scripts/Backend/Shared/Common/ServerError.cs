@@ -1,5 +1,4 @@
-
-using System;
+﻿using System;
 
 namespace Backend.Shared.Common
 {
@@ -20,7 +19,7 @@ namespace Backend.Shared.Common
         private ServerError(EServerErrorCode code, string message, string detail)
         {
             Code = code;
-            Message = string.IsNullOrWhiteSpace(message) ? "서버 요청 처리 중 오류가 발생했습니다." : message;
+            Message = string.IsNullOrWhiteSpace(message) ? "Server request failed." : message;
             Detail = detail ?? string.Empty;
         }
 
@@ -43,7 +42,7 @@ namespace Backend.Shared.Common
         {
             if (exception == null)
             {
-                return Create(EServerErrorCode.Unknown, "알 수 없는 예외가 발생했습니다.");
+                return Create(EServerErrorCode.Unknown, "Unknown exception occurred.");
             }
 
             return Create(EServerErrorCode.Unknown, exception.Message, exception.ToString());
