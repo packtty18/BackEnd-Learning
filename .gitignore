@@ -106,3 +106,4 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ss]ceneDependencyCache*
 Assets/TheBackend/Resources/TheBackendSettings.asset
 Assets/TheBackend/Resources/TheBackendSettings.asset.meta
+AGENTS.md
